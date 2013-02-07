@@ -1,0 +1,1 @@
+Sample projects to illustrate the use of assembly bound lists in Square 9's SmartSearch product suite.
