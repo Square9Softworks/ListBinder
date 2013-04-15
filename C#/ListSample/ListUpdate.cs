@@ -13,7 +13,7 @@ namespace ListSample
 {
     public class ListUpdate
     {
-        public List<string> ListFieldData(String SQLColumn)
+        public List<string> ListFieldData(String DataColumn)
         {
             //Create our list that will return our data to SmartSearch. This must be named 'FieldData'.
             List<String> FieldData = new List<String>();
@@ -27,10 +27,10 @@ namespace ListSample
             oConnection.ConnectionString = "Data Source=(local)\\FULL2008;Initial Catalog=GrapeLanes;Integrated Security=SSPI;";
 
             //Check for valid column name
-            if ((SQLColumn.ToUpper() == "VENDNAME") || (SQLColumn.ToUpper() == "CSTCTR"))
+            if ((DataColumn.ToUpper() == "VENDNAME") || (DataColumn.ToUpper() == "CSTCTR"))
             {
                 //Setting SQL query to return a list of data
-                oCmd.CommandText = "SELECT DISTINCT " + SQLColumn.ToUpper() + " FROM INVDATA";
+                oCmd.CommandText = "SELECT DISTINCT " + DataColumn.ToUpper() + " FROM INVDATA";
             }
             else
             {
